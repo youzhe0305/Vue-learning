@@ -5,7 +5,7 @@ export default {
     data(){
         return{
             ifpop:0,    
-            imgsrc="../assets/No.jpg",    
+            imgsrc:"../assets/No.jpg",    
         }
     },
     methods:{

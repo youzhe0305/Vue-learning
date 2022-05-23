@@ -1,8 +1,6 @@
-<script setup>
-import imge from "./image.vue"
-</script>
-
 <script>
+
+import imge from "./image.vue"
 export default {
     name:"num",
     props:{

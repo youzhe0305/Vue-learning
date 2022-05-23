@@ -1,11 +1,6 @@
 <script>
-import { num } from './components/number.vue'
-</script>
+import num from './components/number.vue'
 
-<script>
-export default {
-
-}
 </script>
 
 <template>
