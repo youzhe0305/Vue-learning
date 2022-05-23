@@ -5,26 +5,27 @@ export default {
     data(){
         return{
             ifpop:0,    
-            imgsrc:"../assets/No.jpg",    
+            imgsrc: "/src/assets/No.jpg",    
         }
     },
     methods:{
         imgclick(){
-            if(ifpop==0){
-                this.imgsrc = "../assets/Yeah.jpg";
+            if(this.ifpop==0){
+                this.imgsrc = "/src/assets/Yeah.jpg";
                 this.ifpop=  1;
             }
-            else if(ifpop==1){
-                this.imgsrc = "../assets/No.jpg";
+            else if(this.ifpop==1){
+                this.imgsrc = '/src/assets/No.jpg';
                 this.ifpop = 0;
             }
             this.$emit("wholeclick")
+            console.log(this.$emit)
         }
     }
 }
 </script>
 <template>
-    <img src="imgsrc" id="backimg" @click="imgclick()">
+    <img :src="imgsrc" id="backimg" @click="imgclick()">
 </template>
 <style>
     #backimg{

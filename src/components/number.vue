@@ -10,21 +10,24 @@ export default {
         }
 
     },
+    components:{
+        imge,
+    },
     data(){
         return{
             count: 0,
-            color: "red",            
+            color: "colorchange_red",            
         }
     },
     methods:{
         colorChange(){
-            if(this.color=="red"){
-                color = "blue"
+            if(this.color=="colorchange_red"){
+                this.color = "colorchange_blue";
             }
-            if(this.color=="blue"){
-                color="red";
+            if(this.color=="colorchange_blue"){
+                this.color="colorchange_red";
             }
-            count++
+            this.count++
         }
     }
 
@@ -33,11 +36,24 @@ export default {
 </script> 
 
 <template>
-  <h1>{{ msg }}</h1>
-  <div :color="color" v-on:wholeclick="colorChange">{{ count }}</div>
-  <imge></imge>
+  <h1 style="text-align: center; font-size:80px;">{{ msg }}</h1>
+  <div :id="color" v-on:wholeclick="colorChange">{{ count }}</div>
+  <imge @wholeclick="colorChange"></imge>
 </template>
 
 <style>
+
+#colorchange_red{
+    color: red;
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#colorchange_blue{
+    color: blue;
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 </style>
